@@ -1,0 +1,5 @@
+{
+  "name": "픽셀 아트 생성기",
+  "description": "Generate unique pixel art from text descriptions using Google's Imagen model. Type in your idea and see it come to life in a retro, blocky style.",
+  "requestFramePermissions": []
+}
