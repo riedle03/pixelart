@@ -1,26 +1,27 @@
 
 import React from 'react';
-import PixelatedCard from './PixelatedCard';
+import Spinner from './Spinner';
 
 interface ImageDisplayProps {
-  src: string;
-  alt: string;
+  imageUrl: string | null;
+  isLoading: boolean;
 }
 
-export const ImageDisplay: React.FC<ImageDisplayProps> = ({ src, alt }) => {
+const ImageDisplay: React.FC<ImageDisplayProps> = ({ imageUrl, isLoading }) => {
   return (
-    <PixelatedCard className="border-[#16c79a] shadow-[8px_8px_0px_0px_rgba(22,199,154,0.5)]">
-      <div className="bg-black p-2">
-        <img
-          src={src}
-          alt={alt || "Generated pixel art"}
-          className="w-full h-auto object-contain"
-          style={{ imageRendering: 'pixelated' }}
-        />
-      </div>
-      <p className="text-center text-xs text-[#e0e1dd] mt-4 break-words">
-        당신의 작품: "{alt}"
-      </p>
-    </PixelatedCard>
+    <div className="w-full aspect-square bg-[#1a1a1a] border-4 border-dashed border-gray-600 flex items-center justify-center p-2">
+      {isLoading && <Spinner />}
+      {!isLoading && imageUrl && (
+        <img src={imageUrl} alt="생성된 픽셀 아트" className="w-full h-full object-contain" />
+      )}
+      {!isLoading && !imageUrl && (
+        <div className="text-center text-gray-400">
+          <p className="text-2xl mb-2">🖼️</p>
+          <p>이곳에 생성된 이미지가 표시됩니다.</p>
+        </div>
+      )}
+    </div>
   );
 };
+
+export default ImageDisplay;

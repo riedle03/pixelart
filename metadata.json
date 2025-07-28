@@ -1,5 +1,5 @@
 {
-  "name": "픽셀 아트 생성기",
-  "description": "Generate unique pixel art from text descriptions using Google's Imagen model. Type in your idea and see it come to life in a retro, blocky style.",
+  "name": "AI 픽셀 아트 생성기",
+  "description": "텍스트 프롬프트를 사용하여 멋진 픽셀 아트를 생성합니다. Imagen AI 모델을 사용하여 당신의 상상력을 현실로 만들어보세요.",
   "requestFramePermissions": []
 }
