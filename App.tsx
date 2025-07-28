@@ -48,19 +48,22 @@ const App: React.FC = () => {
           
           <PixelatedCard className="mt-8">
             <div className="flex flex-col gap-4">
+              {/* --- 한국어 수정 --- */}
               <label htmlFor="prompt-input" className="text-[#e0e1dd] text-sm sm:text-base">
-                Enter your vision:
+                상상을 펼쳐보세요:
               </label>
               <Input
                 id="prompt-input"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="e.g., a knight fighting a dragon"
+                // --- 한국어 수정 ---
+                placeholder="예) 용과 싸우는 기사"
                 disabled={isLoading}
               />
+              {/* --- 한국어 수정 --- */}
               <Button onClick={handleGenerate} disabled={isLoading || !prompt}>
-                {isLoading ? 'Generating...' : 'Generate Art'}
+                {isLoading ? '생성 중...' : '픽셀 아트 생성'}
               </Button>
             </div>
           </PixelatedCard>

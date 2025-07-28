@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
         https://aicreatorz.netlify.app/
       </a>
       <p className="text-xs text-gray-500 mt-2">
-        © 2025 이대형. All rights reserved.
+        © 2025 Daniel LEE. All rights reserved.
       </p>
     </footer>
   );
