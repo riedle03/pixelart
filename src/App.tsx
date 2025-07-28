@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-// 경로 수정: './services/...' -> '../services/...'
-import { generatePixelArt } from '../services/geminiService';
+// 모든 파일 경로를 현재 폴더(./)에서 시작하도록 수정합니다.
+import { generatePixelArt } from './services/geminiService';
 import PixelatedCard from './components/PixelatedCard';
 import Button from './components/Button';
 import Input from './components/Input';
