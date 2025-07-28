@@ -1,10 +1,10 @@
-/* 1. TailwindCSS 기본 지시어를 먼저 선언합니다. */
+/* 1. @import 구문이 파일의 가장 처음에 와야 합니다. */
+@import url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102@1.0/DungGeunMo.woff');
+
+/* 2. 그 다음에 TailwindCSS 기본 지시어를 선언합니다. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* 2. 'DungGeunMo' 폰트를 웹에서 불러옵니다. */
-@import url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102@1.0/DungGeunMo.woff');
 
 /* 3. Tailwind의 'base' 레이어에 기본 폰트를 재정의합니다. */
 @layer base {
@@ -13,8 +13,3 @@
     font-family: 'DungGeunMo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 }
-
-/* Vite 기본 템플릿에 있던 나머지 스타일(a, h1, button 등)은
-  우리 앱의 디자인과 맞지 않고 Tailwind로 대체되므로 모두 제거했습니다.
-  이로 인해 발생했던 빌드 오류도 함께 해결됩니다.
-*/

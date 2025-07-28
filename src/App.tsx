@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react';
-// src 폴더를 기준으로, 상위 폴더(../)에 있는 components와 services를 가져옵니다.
+// 모든 컴포넌트 import에서 중괄호 {} 를 제거했습니다.
 import { generatePixelArt } from '../services/geminiService';
-import { Button } from '../components/Button';
-import { Footer } from '../components/Footer';
-import { Header } from '../components/Header';
-import { ImageDisplay } from '../components/ImageDisplay';
-import { Input } from '../components/Input';
-import { PixelatedCard } from '../components/PixelatedCard';
-import { Spinner } from '../components/Spinner';
+import Button from '../components/Button';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import ImageDisplay from '../components/ImageDisplay';
+import Input from '../components/Input';
+import PixelatedCard from '../components/PixelatedCard';
+import Spinner from '../components/Spinner';
 
 const App: React.FC = () => {
   const [prompt, setPrompt] = useState<string>('');
