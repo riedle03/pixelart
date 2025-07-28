@@ -1,76 +1,20 @@
-/* 1. 'DungGeunMo' 폰트를 웹에서 불러옵니다. 이 코드는 파일 최상단에 한 번만 있어야 합니다. */
+/* 1. TailwindCSS 기본 지시어를 먼저 선언합니다. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. 'DungGeunMo' 폰트를 웹에서 불러옵니다. */
 @import url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102@1.0/DungGeunMo.woff');
 
-:root {
-  /* 2. 기본 폰트를 'DungGeunMo'로 변경합니다. */
-  font-family: 'DungGeunMo', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  /* 아래 스타일은 Vite 기본 페이지를 중앙 정렬하기 위한 것으로,
-    우리 앱의 레이아웃은 App.tsx에서 관리하므로 제거해도 괜찮습니다.
-  */
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; 
-  */
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color: 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+/* 3. Tailwind의 'base' 레이어에 기본 폰트를 재정의합니다. */
+@layer base {
+  html {
+    /* 여기에 'DungGeunMo' 폰트를 적용합니다. */
+    font-family: 'DungGeunMo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 }
+
+/* Vite 기본 템플릿에 있던 나머지 스타일(a, h1, button 등)은
+  우리 앱의 디자인과 맞지 않고 Tailwind로 대체되므로 모두 제거했습니다.
+  이로 인해 발생했던 빌드 오류도 함께 해결됩니다.
+*/
