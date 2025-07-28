@@ -1,5 +1,9 @@
+/* 1. 'DungGeunMo' 폰트를 웹에서 불러옵니다. */
+@import url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102@1.0/DungGeunMo.woff');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* 2. 기본 폰트를 'DungGeunMo'로 변경합니다. */
+  font-family: 'DungGeunMo', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,10 +28,14 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* 아래 스타일은 Vite 기본 페이지를 중앙 정렬하기 위한 것으로,
+    우리 앱의 레이아웃은 App.tsx에서 관리하므로 제거해도 괜찮습니다.
+  */
+  /* display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; 
+  */
 }
 
 h1 {
@@ -44,7 +52,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color: 0.25s;
 }
 button:hover {
   border-color: #646cff;

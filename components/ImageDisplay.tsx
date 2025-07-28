@@ -19,7 +19,7 @@ export const ImageDisplay: React.FC<ImageDisplayProps> = ({ src, alt }) => {
         />
       </div>
       <p className="text-center text-xs text-[#e0e1dd] mt-4 break-words">
-        Your creation: "{alt}"
+        당신의 작품: "{alt}"
       </p>
     </PixelatedCard>
   );

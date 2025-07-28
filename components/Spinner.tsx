@@ -14,7 +14,7 @@ const Spinner: React.FC = () => {
         <div className="w-4 h-4 bg-white absolute bottom-0 left-0 animate-pulse delay-150"></div>
         <div className="w-4 h-4 bg-white absolute bottom-0 right-0 animate-pulse delay-200"></div>
       </div>
-      <p className="text-lg text-gray-300">Conjuring pixels...</p>
+      <p className="text-lg text-gray-300">픽셀을 불러오는 중...</p>
     </div>
   );
 };
